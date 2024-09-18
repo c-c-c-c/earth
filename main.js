@@ -1,5 +1,5 @@
-// import * as THREE from "three"; // 修正
-// import { OrbitControls } from "./jsm/controls/OrbitControls.js";
+import * as THREE from "three"; // 修正
+import { OrbitControls } from "./jsm/controls/OrbitControls.js";
 
 // /////////////////////////////////////////////////////////////
 
