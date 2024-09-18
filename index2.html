@@ -23,8 +23,9 @@
       const height = 540;
 
       // レンダラーを作成
+      const canvasElement = document.querySelector("#myCanvas");
       const renderer = new THREE.WebGLRenderer({
-        canvas: document.querySelector("#myCanvas"),
+        canvas: canvasElement,
       });
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(width, height);
@@ -35,6 +36,10 @@
       // カメラを作成
       const camera = new THREE.PerspectiveCamera(45, width / height);
       camera.position.set(0, 0, +1000);
+
+
+      // カメラのコントロール
+      const controls = new OrbitControls(camera, canvasElement);
 
       // 箱を作成
       const geometry = new THREE.BoxGeometry(400, 400, 400);
