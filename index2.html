@@ -59,6 +59,9 @@
       directionalLight2.position.set(1, 0, 1);
       scene.add(directionalLight2);
 
+      const ambientlight = new THREE.AmbientLight(0xFFFFFF, 10);
+      scene.add(ambientlight);
+
 
       // ロード
       const loader = new GLTFLoader();
