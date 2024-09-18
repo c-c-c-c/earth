@@ -1,4 +1,4 @@
-import * as THREE from "three"; // 修正
+// import * as THREE from "three"; // 修正
 // import { OrbitControls } from "./jsm/controls/OrbitControls.js";
 
 // /////////////////////////////////////////////////////////////
