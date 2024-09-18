@@ -55,7 +55,7 @@
       scene.add(directionalLight);
 
       // 横からテラス
-      const directionalLight2 = new THREE.DirectionalLight(0xffffff);
+      const directionalLight2 = new THREE.DirectionalLight(0xffffff,10);
       directionalLight2.position.set(1, 0, 1);
       scene.add(directionalLight2);
 
@@ -94,7 +94,7 @@
 
       // 毎フレーム時に実行されるループイベントです
       function tick() {
-        // box.rotation.y += 0.01;
+        model.rotation.y += 0.01;
         renderer.render(scene, camera); // レンダリング
 
         requestAnimationFrame(tick);
