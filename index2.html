@@ -38,14 +38,14 @@
 
       // ロード
       const loader = new THREE.GLTFLoader();
-      const url = './Sun.glb';
+      const url = 'https://c-c-c-c.github.io/earth/Sun.glb';
       
       let model = null;
       loader.load(
           url, 
           function ( gltf ){
               model = gltf.scene;
-              model.name = "model_with_cloth";
+              model.name = "sun";
               model.scale.set(400.0, 400.0, 400.0);
               model.position.set(0,-400,0);
               scene.add( gltf.scene );
