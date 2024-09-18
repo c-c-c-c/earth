@@ -44,24 +44,24 @@
       const loader = new THREE.GLTFLoader();
       const url = 'https://c-c-c-c.github.io/earth/Sun.glb';
       
-      let model = null;
-      loader.load(
-          url, 
-          function ( gltf ){
-              model = gltf.scene;
-              model.name = "sun";
-              model.scale.set(400.0, 400.0, 400.0);
-              model.position.set(0,-400,0);
-              scene.add( gltf.scene );
+      // let model = null;
+      // loader.load(
+      //     url, 
+      //     function ( gltf ){
+      //         model = gltf.scene;
+      //         model.name = "sun";
+      //         model.scale.set(400.0, 400.0, 400.0);
+      //         model.position.set(0,-400,0);
+      //         scene.add( gltf.scene );
         
-              model["test"] = 100;
-              console.log("model");
-          },
-          function ( error ) {
-              console.log( 'An error happened' );
-              console.log( error );
-          }
-      );
+      //         model["test"] = 100;
+      //         console.log("model");
+      //     },
+      //     function ( error ) {
+      //         console.log( 'An error happened' );
+      //         console.log( error );
+      //     }
+      // );
 
       tick();
 
