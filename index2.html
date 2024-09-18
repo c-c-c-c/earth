@@ -50,12 +50,12 @@
       // scene.add(box); // 箱の表示を消す
 
       //上からテラス
-      const directionalLight = new THREE.DirectionalLight(0xffffff);
+      const directionalLight = new THREE.DirectionalLight(0xffffff,100);
       directionalLight.position.set(1, 1, 1);
       scene.add(directionalLight);
 
       // 横からテラス
-      const directionalLight2 = new THREE.DirectionalLight(0xffffff,10);
+      const directionalLight2 = new THREE.DirectionalLight(0xffffff,100);
       directionalLight2.position.set(1, 0, 1);
       scene.add(directionalLight2);
 
