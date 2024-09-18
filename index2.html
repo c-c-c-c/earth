@@ -44,10 +44,21 @@
 
 
       // 箱を作成
-      const geometry = new THREE.BoxGeometry(400, 400, 400);
-      const material = new THREE.MeshNormalMaterial();
-      const box = new THREE.Mesh(geometry, material);
+      // const geometry = new THREE.BoxGeometry(400, 400, 400);
+      // const material = new THREE.MeshNormalMaterial();
+      // const box = new THREE.Mesh(geometry, material);
       // scene.add(box); // 箱の表示を消す
+
+      //上からテラス
+      const directionalLight = new THREE.DirectionalLight(0xffffff);
+      directionalLight.position.set(1, 1, 1);
+      scene.add(directionalLight);
+
+      // 横からテラス
+      const directionalLight2 = new THREE.DirectionalLight(0xffffff);
+      directionalLight2.position.set(1, 0, 1);
+      scene.add(directionalLight2);
+
 
       // ロード
       const loader = new GLTFLoader();
