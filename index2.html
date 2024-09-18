@@ -10,6 +10,7 @@
     </script>
     <script type="module">
       import * as THREE from "three";
+      import { GLTFLoader } from './three/addons/loaders/GLTFLoader.js';
 
       // サイズを指定
       const width = 960;
@@ -34,6 +35,29 @@
       const material = new THREE.MeshNormalMaterial();
       const box = new THREE.Mesh(geometry, material);
       scene.add(box);
+
+      // ロード
+      const loader = new THREE.GLTFLoader();
+      const url = './Sun.glb';
+      
+      let model = null;
+      loader.load(
+          url, 
+          function ( gltf ){
+              model = gltf.scene;
+              model.name = "model_with_cloth";
+              model.scale.set(400.0, 400.0, 400.0);
+              model.position.set(0,-400,0);
+              scene.add( gltf.scene );
+
+              model["test"] = 100;
+              console.log("model");
+          },
+          function ( error ) {
+              console.log( 'An error happened' );
+              console.log( error );
+          }
+      );
 
       tick();
 
