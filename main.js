@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { OrbitControls } from '../three/examples/jsm/controls/OrbitControls';
 
 // import * as THREE from "three"; // 修正
 // import { OrbitControls } from "./jsm/controls/OrbitControls.js";
