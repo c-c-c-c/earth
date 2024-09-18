@@ -78,7 +78,7 @@
 
       // 毎フレーム時に実行されるループイベントです
       function tick() {
-        model.rotation.y += 0.01;
+        model.rotation.y += 0.003;
         renderer.render(scene, camera); // レンダリング
 
         requestAnimationFrame(tick);
