@@ -51,6 +51,13 @@
 
       // ロード
       const loader = new GLTFLoader();
+
+      const objects = await loader.loadAsync("./Sun.glb");
+      // 読み込み後に3D空間に追加
+      const model = objects.scene;
+      scene.add(model);
+
+
       // const url = 'https://c-c-c-c.github.io/earth/Sun.glb';
       
       // let model = null;
