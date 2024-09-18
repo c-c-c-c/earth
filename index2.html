@@ -34,7 +34,7 @@
       const geometry = new THREE.BoxGeometry(400, 400, 400);
       const material = new THREE.MeshNormalMaterial();
       const box = new THREE.Mesh(geometry, material);
-      scene.add(box);
+      // scene.add(box); # 箱の表示を消す
 
       // ロード
       const loader = new THREE.GLTFLoader();
@@ -49,7 +49,7 @@
               model.scale.set(400.0, 400.0, 400.0);
               model.position.set(0,-400,0);
               scene.add( gltf.scene );
-
+        
               model["test"] = 100;
               console.log("model");
           },
