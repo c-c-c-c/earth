@@ -98,6 +98,12 @@
         velocity*=1.1;
       });
 
+      btn.addEventListener("click", (e) => {
+        console.log("hoge");
+        
+        velocity=0.01;
+      });
+
 
 
   </script>
@@ -106,6 +112,7 @@
   <body>
     <canvas id="myCanvas"></canvas><br>
     <input type="submit" id="btn" value="回れ">
+    <input type="submit" id="stop_btn" value="回れ">
     
   </body>
   </html>
