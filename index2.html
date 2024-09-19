@@ -16,7 +16,8 @@
       import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
       
 
-
+      // 回転速度
+      let velocity = 0.03;
 
       // サイズを指定
       const width = 960;
@@ -76,7 +77,7 @@
 
       tick();
 
-      let velocity = 0.03;
+
       // 毎フレーム時に実行されるループイベントです
       function tick() {
         model.rotation.y += velocity;
