@@ -83,7 +83,16 @@
 
         requestAnimationFrame(tick);
       }
-    </script>
+
+      let btn = document.getElementById("btn")
+      btn.addEventListener("click", (e) => {
+        console.log(this.className); // 警告: `this` は `my_element` ではない
+        console.log(e.currentTarget === this); // `false` をログ出力
+      });
+
+
+
+  </script>
 
   </head>
   <body>
@@ -91,13 +100,4 @@
     <input type="submit" id="btn" value="回れ">
     
   </body>
-  <script>
-    let btn = document.getElementById("btn")
-    
-    btn.addEventListener("click", (e) => {
-      console.log(this.className); // 警告: `this` は `my_element` ではない
-      console.log(e.currentTarget === this); // `false` をログ出力
-    });
-
-  </script>
   </html>
