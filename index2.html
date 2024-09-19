@@ -95,14 +95,14 @@
         console.log("hoge");
         // console.log(this.className); // 警告: `this` は `my_element` ではない
         // console.log(e.currentTarget === this); // `false` をログ出力
-        velocity*=1.15;
+        velocity*=1.2;
       });
 
       let stop_btn = document.getElementById("stop_btn")
       stop_btn.addEventListener("click", (e) => {
         console.log("fuga");
         
-        velocity=0.01;
+        velocity=0.001;
       });
 
 
