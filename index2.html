@@ -76,9 +76,10 @@
 
       tick();
 
+      let velocity = 0.03;
       // 毎フレーム時に実行されるループイベントです
       function tick() {
-        model.rotation.y += 0.003;
+        model.rotation.y += velocity;
         renderer.render(scene, camera); // レンダリング
 
         requestAnimationFrame(tick);
@@ -88,6 +89,7 @@
       btn.addEventListener("click", (e) => {
         console.log(this.className); // 警告: `this` は `my_element` ではない
         console.log(e.currentTarget === this); // `false` をログ出力
+        velocity+=0.01;
       });
 
 
