@@ -87,8 +87,9 @@
 
       let btn = document.getElementById("btn")
       btn.addEventListener("click", (e) => {
+        console.log("hoge");
         // console.log(this.className); // 警告: `this` は `my_element` ではない
-        console.log(e.currentTarget === this); // `false` をログ出力
+        // console.log(e.currentTarget === this); // `false` をログ出力
         velocity+=0.01;
       });
 
